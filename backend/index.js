@@ -2,6 +2,8 @@ import express  from "express";
 const app = express();
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
+
+import userRoutes from './routes/user.routes.js';
 dotenv.config();// initialising dotenv configuration
 
 
@@ -20,7 +22,7 @@ mongoose
 
 
 
-
+app.use('/api/user',userRoutes);
 
 
 
