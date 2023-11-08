@@ -13,7 +13,13 @@ const userSchema=  new mongoose.Schema({
     password:{
         type:String,
         required:true,
-    }
+    },
+    
+    profilePicture:{
+        type:String,
+        default:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7lL2e9Vu6wxs7KaoTw2KNB5pdWxd-f8MsATFP1-Jp&s",
+    },
 },{timestamps: true});// each user has extra information that is 
 // time of creation and time of deletion . This is not necessary but admin can use it to sort users by time
 // mongoDB automatically adds this information for us
